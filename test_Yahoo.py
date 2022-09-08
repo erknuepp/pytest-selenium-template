@@ -18,7 +18,7 @@ class TestYahoo:
     @pytest.fixture
     def driver(self):
         path = r"C:\WebDrivers\chromedriver.exe"
-        self.driver = wd.Chrome(executable_path=path)
+        self.driver = wd.Chrome(path)
         self.driver.maximize_window()
         self.wait = WebDriverWait(self.driver, 10)
         yield self.driver
